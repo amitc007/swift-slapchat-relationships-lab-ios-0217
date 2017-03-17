@@ -24,6 +24,7 @@ class AddMessageViewController: UIViewController {
         let newMessage = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
         newMessage.content = addMessageTextField.text
         newMessage.createdAt = NSDate()
+        
         store.saveContext()
         dismiss(animated: true, completion: nil)
     }

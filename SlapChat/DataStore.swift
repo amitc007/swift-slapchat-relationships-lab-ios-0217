@@ -13,6 +13,10 @@ class DataStore {
     
     var messages:[Message] = []
     
+    var recipients:[Recipient] = []
+    
+    //var dictionary:[Recipient:[Message]] = [:]
+    
     static let sharedInstance = DataStore()
     
     private init() {}
@@ -85,6 +89,23 @@ class DataStore {
         }
     }
     
+    
+    func fetchRecipient() {
+        let context = persistentContainer.viewContext
+        let recipientReq:NSFetchRequest<Recipient> = Recipient.fetchRequest()
+        do {
+            recipients = try context.fetch(recipientReq)
+            
+        } catch {
+            print("Error fetching recipients")
+        }
+        
+        if recipients.count == 0 {
+            generateTestRecipients()
+        }
+    }
+    
+    
     // MARK: - Core Data generation of test data
     
     func generateTestData() {
@@ -108,5 +129,53 @@ class DataStore {
         saveContext()
         fetchData()
     }
+    
+    func searchRecipient(name:String)->[Recipient] {
+        let context = persistentContainer.viewContext
+        var tmpRecipients:[Recipient] = []
+        let recipientReq:NSFetchRequest<Recipient> = Recipient.fetchRequest()
+        recipientReq.predicate = NSPredicate(format: "name == %@", name)
+        do {
+            tmpRecipients = try context.fetch(recipientReq)
+        } catch {   }
+        return tmpRecipients
+    }
+    
+    func searchMessage(str:String)->[Message] {
+        let context = persistentContainer.viewContext
+        var tmpMessages:[Message] = []
+        let messageReq:NSFetchRequest<Message> = Message.fetchRequest()
+        messageReq.predicate = NSPredicate(format: "content like %@", str)
+        do {
+            tmpMessages = try context.fetch(messageReq)
+        } catch {   }
+        return tmpMessages
+        
+        
+    }
+    
+    func generateTestRecipients() {
+        let context = persistentContainer.viewContext
+        
+        let recipientOne: Recipient = NSEntityDescription.insertNewObject(forEntityName: "Recipient", into: context) as! Recipient
+        
+        recipientOne.name = "Recipient 1"
+        recipientOne.phoneNumber = "1111111"
+        
+        let recipientTwo: Recipient = NSEntityDescription.insertNewObject(forEntityName: "Recipient", into: context) as! Recipient
+        
+        recipientTwo.name = "Recipient 2"
+        recipientTwo.phoneNumber = "222222222"
+        
+        let recipientThree: Recipient = NSEntityDescription.insertNewObject(forEntityName: "Recipient", into: context) as! Recipient
+        
+        recipientThree.name = "Recipient 3"
+        recipientThree.phoneNumber = "33333333"
+        
+        saveContext()
+        fetchData()
+    }
+ 
+    
     
 }

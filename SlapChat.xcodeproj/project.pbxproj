@@ -15,6 +15,8 @@
 		1B5504701DD102400043E319 /* AddMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046D1DD102400043E319 /* AddMessageViewController.swift */; };
 		1B5504711DD102400043E319 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046E1DD102400043E319 /* DataStore.swift */; };
 		1B5504721DD102400043E319 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B55046F1DD102400043E319 /* TableViewController.swift */; };
+		4025971C1E7C289800425BA8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025971B1E7C289800425BA8 /* SearchViewController.swift */; };
+		4077D4FE1E7B9F3A00885DE6 /* RecipientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4077D4FD1E7B9F3A00885DE6 /* RecipientTableViewController.swift */; };
 		8F68DA0F1E1466D7006F842D /* SlapChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F68DA0E1E1466D7006F842D /* SlapChatTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		1B55046D1DD102400043E319 /* AddMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMessageViewController.swift; sourceTree = "<group>"; };
 		1B55046E1DD102400043E319 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		1B55046F1DD102400043E319 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		4025971B1E7C289800425BA8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4077D4FD1E7B9F3A00885DE6 /* RecipientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipientTableViewController.swift; sourceTree = "<group>"; };
 		8F68DA0C1E1466D7006F842D /* SlapChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlapChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F68DA0E1E1466D7006F842D /* SlapChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlapChatTests.swift; sourceTree = "<group>"; };
 		8F68DA101E1466D7006F842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				1B55046F1DD102400043E319 /* TableViewController.swift */,
 				1B55046D1DD102400043E319 /* AddMessageViewController.swift */,
 				1B55043C1DD1004A0043E319 /* Main.storyboard */,
+				4025971B1E7C289800425BA8 /* SearchViewController.swift */,
+				4077D4FD1E7B9F3A00885DE6 /* RecipientTableViewController.swift */,
 				1B5504421DD1004A0043E319 /* Assets.xcassets */,
 				1B5504441DD1004A0043E319 /* LaunchScreen.storyboard */,
 				1B5504471DD1004A0043E319 /* Info.plist */,
@@ -211,8 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B5504711DD102400043E319 /* DataStore.swift in Sources */,
+				4025971C1E7C289800425BA8 /* SearchViewController.swift in Sources */,
 				1B5504701DD102400043E319 /* AddMessageViewController.swift in Sources */,
 				1B5504411DD1004A0043E319 /* SlapChat.xcdatamodeld in Sources */,
+				4077D4FE1E7B9F3A00885DE6 /* RecipientTableViewController.swift in Sources */,
 				1B5504721DD102400043E319 /* TableViewController.swift in Sources */,
 				1B5504391DD1004A0043E319 /* AppDelegate.swift in Sources */,
 			);
